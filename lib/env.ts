@@ -1,6 +1,6 @@
-import { createEnv } from "@t3-oss/env-core";
-import { z } from "zod";
- 
+import { createEnv } from '@t3-oss/env-core'
+import { z } from 'zod'
+
 export const env = createEnv({
   server: {
     DATABASE_URL: z.string().url(),
@@ -11,14 +11,13 @@ export const env = createEnv({
     RESEND_API_KEY: z.string().min(1),
     ARCJET_KEY: z.string().min(1),
   },
- 
- 
+
   /**
    * What object holds the environment variables at runtime. This is usually
    * `process.env` or `import.meta.env`.
    */
   runtimeEnv: process.env,
- 
+
   /**
    * By default, this library will feed the environment variables directly to
    * the Zod validator.
@@ -33,4 +32,4 @@ export const env = createEnv({
    * explicitly specify this option as true.
    */
   emptyStringAsUndefined: true,
-});
+})
