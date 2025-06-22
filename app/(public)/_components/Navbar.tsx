@@ -9,7 +9,7 @@ import Link from "next/link";
 const navagationItems = [
   { name: 'Home', href: '/' },
   { name: 'Courses', href: '/courses' },
-  { name: 'Dashboard', href: '/dashboard' },
+  { name: 'Dashboard', href: '/admin' },
 ]
 
 export default function Navbar() {
